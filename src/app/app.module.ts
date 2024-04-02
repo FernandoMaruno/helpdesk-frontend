@@ -28,19 +28,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
-// Componente gerado
+// Componente Nav criado
 import { NavComponent } from './components/nav/nav.component';
+// Componente Home criado
 import { HomeComponent } from './components/home/home.component';
+// Componente Header criado
 import { HeaderComponent } from './components/header/header.component';
+// Componente TecnicoList criado
+import { TecnicoListComponent } from './tecnico/tecnico-list/tecnico-list.component';
 
  
 @NgModule({
   declarations: [
     AppComponent,
-    // Componente gerado
+    // Componente Nav gerado
     NavComponent,
+    // Componente Home gerado
     HomeComponent,
-    HeaderComponent
+    // Componente Header gerado
+    HeaderComponent,
+    // Componente TecnicoList gerado
+    TecnicoListComponent
   ],
   imports: [
     BrowserModule,
