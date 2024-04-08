@@ -36,6 +36,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 // Componente TecnicoList criado
 import { TecnicoListComponent } from './tecnico/tecnico-list/tecnico-list.component';
+// Component Login criado
+import { LoginComponent } from './components/login/login.component';
 
  
 @NgModule({
@@ -48,7 +50,9 @@ import { TecnicoListComponent } from './tecnico/tecnico-list/tecnico-list.compon
     // Componente Header gerado
     HeaderComponent,
     // Componente TecnicoList gerado
-    TecnicoListComponent
+    TecnicoListComponent,
+    // Componente Login gerado
+    LoginComponent
   ],
   imports: [
     BrowserModule,
