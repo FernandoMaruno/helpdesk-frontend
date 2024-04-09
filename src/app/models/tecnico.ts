@@ -7,7 +7,3 @@ export interface Tecnico {
     perfis: string[];
     dataCriacao: any; 
 }
-
-export interface Teste {
-    id: string;
-}
