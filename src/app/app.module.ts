@@ -38,6 +38,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './tecnico/tecnico-list/tecnico-list.component';
 // Component Login criado
 import { LoginComponent } from './components/login/login.component';
+// ToastrModule importado
+import { ToastrModule } from 'ngx-toastr';
 
  
 @NgModule({
@@ -77,9 +79,15 @@ import { LoginComponent } from './components/login/login.component';
     MatTableModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    // ToastrModule importado
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
