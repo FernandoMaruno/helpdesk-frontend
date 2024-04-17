@@ -35,11 +35,14 @@ import { HomeComponent } from './components/home/home.component';
 // Componente Header criado
 import { HeaderComponent } from './components/header/header.component';
 // Componente TecnicoList criado
-import { TecnicoListComponent } from './tecnico/tecnico-list/tecnico-list.component';
+import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 // Component Login criado
 import { LoginComponent } from './components/login/login.component';
 // ToastrModule importado
 import { ToastrModule } from 'ngx-toastr';
+
+// AuthInterceptorProvider
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
  
 @NgModule({
@@ -87,7 +90,7 @@ import { ToastrModule } from 'ngx-toastr';
       progressBar: true
     })
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent] 
 })
 export class AppModule { }
