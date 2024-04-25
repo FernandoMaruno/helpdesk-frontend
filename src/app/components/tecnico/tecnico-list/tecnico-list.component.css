@@ -6,3 +6,11 @@
 table {
     width: 100%;
   }
+
+.edit {
+    color: rgb(0, 0, 192)
+}
+
+.delete {
+    color: rgb(128, 0, 0);
+}
