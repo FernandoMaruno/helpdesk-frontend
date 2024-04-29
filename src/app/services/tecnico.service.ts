@@ -11,11 +11,19 @@ export class TecnicoService {
 
   constructor(private http: HttpClient) { }
 
+  findByIdReq(id: any): Observable<Tecnico> {
+    return this.http.get<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${id}`)
+  }
+
   findAllReq(): Observable<Tecnico[]> {
     return this.http.get<Tecnico[]>(`${API_CONFIG.baseUrl}/tecnicos`);
   }
 
   createReq(tecnico: Tecnico): Observable<Tecnico> {
     return this.http.post<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos`, tecnico);
+  }
+
+  updateReq(tecnico: Tecnico): Observable<Tecnico> {
+    return this.http.put<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${tecnico.id}`, tecnico)
   }
 }
