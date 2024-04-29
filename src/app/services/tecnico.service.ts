@@ -12,7 +12,7 @@ export class TecnicoService {
   constructor(private http: HttpClient) { }
 
   findByIdReq(id: any): Observable<Tecnico> {
-    return this.http.get<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${id}`)
+    return this.http.get<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${id}`);
   }
 
   findAllReq(): Observable<Tecnico[]> {
@@ -24,6 +24,10 @@ export class TecnicoService {
   }
 
   updateReq(tecnico: Tecnico): Observable<Tecnico> {
-    return this.http.put<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${tecnico.id}`, tecnico)
+    return this.http.put<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${tecnico.id}`, tecnico);
+  }
+
+  deleteReq(id: any): Observable<Tecnico> {
+    return this.http.delete<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${id}`);
   }
 }
